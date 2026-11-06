@@ -1,0 +1,42 @@
+knoxmap_1793988361042
+A Project Zomboid map made with KnoxMap.
+
+Turning it on
+-------------
+1. Start Project Zomboid.
+2. Main menu -> Mods, tick this mod, and restart the game if it asks.
+3. New game -> the map appears as its own starting region.
+
+If the map is not in the list, close the game completely and start it
+again: Build 42 only reads the mods folder at startup.
+
+In the game
+-----------
+Right-click the ground for "Reset loot" to refill the containers in a
+building, or everything within 30 tiles, without starting a new save.
+
+Add it before you start the world
+---------------------------------
+Turn the mod on first, then make the save. Project Zomboid writes the
+world to disk cell by cell as you walk into it, from whatever map was
+loaded at the time, so a map added or changed partway through leaves
+old cells sitting next to new ones that do not match. That shows up
+later as odd failures rather than a clear error, and the only fix is
+a new save. The same goes for rebuilding this map: rebuild, reinstall,
+start a new world.
+
+On a server, see SERVER SETUP.txt beside this file.
+
+This is a big map
+-----------------
+522 cells. Project Zomboid gives itself 3 GB of memory by default,
+which a map this size can run out of - the map tears, the game slows
+and then it closes. To raise it, edit ProjectZomboid64.json in the
+game folder (Steam -> right-click Project Zomboid -> Manage -> Browse)
+and change the line
+
+    "-Xmx3g",
+
+to a third or so of the memory your PC has - "-Xmx8g" on a 16 GB
+machine, "-Xmx16g" on 32 GB. Steam replaces that file when it
+verifies the game's files, so check it again after an update.

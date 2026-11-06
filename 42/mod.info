@@ -1,0 +1,5 @@
+name=knoxmap_1793988361042
+id=knoxmap_1793988361042
+description=knoxmap_1793988361042, generated from real-world map data with KnoxMap by euclid80tr. Map data (c) OpenStreetMap contributors (ODbL). Optional: Elevators (working lifts), Spawn Selector (choose where to start).
+poster=poster.png
+require=Erikas_Tiles

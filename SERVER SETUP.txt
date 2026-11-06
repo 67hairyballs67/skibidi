@@ -1,0 +1,73 @@
+knoxmap_1793988361042 on a dedicated server
+===========================================
+
+Do this BEFORE anyone joins. A Project Zomboid world is written to
+disk cell by cell as players walk into it, and those cells are built
+from whatever map was loaded at the time. Add or change a map on a
+world that already exists and the old cells stay as they were, next
+to new ones that do not match them. There is no repair for that -
+the answer is always a new world.
+
+1. Copy the folder holding this file into the server's mods folder,
+   the same place a player's mods go.
+
+   AND give the same folder to every player, to put in their own
+   Zomboid/mods. This map is not on the Steam Workshop, so nothing
+   downloads it for them. A player without it is refused at the door
+   or falls through the world where the map should be.
+
+2. In your server's .ini (Zomboid/Server/<name>.ini), set:
+
+      Mods=knoxmap_1793988361042
+      Map=knoxmap_1793988361042;Muldraugh, KY
+
+   Keep Muldraugh, KY at the end: the game reads the vanilla lot
+   definitions from it, and this map inherits them.
+   If either line already has entries, add to them with a semicolon
+   between - do not replace what is there.
+   Spell both exactly as above. Most servers run Linux, where the
+   map folder name is case sensitive and a wrong capital is simply
+   a map that is not there.
+
+   This map is built with Erika's Tiles, so the server needs that
+   mod as well and so does every player:
+
+      Mods=Erikas_Tiles;knoxmap_1793988361042
+      WorkshopItems=3346506593
+
+   Without it the map loads with its tiles missing - walls and shop
+   fronts you can see straight through.
+
+3. Copy server/knoxmap_1793988361042_spawnregions.lua into Zomboid/Server/ and rename it to
+   <your server name>_spawnregions.lua, matching the .ini's name.
+   Without it players spawn in Muldraugh, not here.
+
+4. Delete the old save if the server has run before:
+   Zomboid/Saves/Multiplayer/<your server name>.
+
+5. Start the server.
+
+Changing the map later
+----------------------
+Rebuild it, copy the mod over to the server AND to every player, and
+start a new world. Keeping the old save is what causes the random
+failures people report - chunks that were generated from the previous
+version of the map do not agree with the new one, and the mismatch
+surfaces hours later as buildings half-written, players falling
+through floors, or the server dying on a cell it cannot read.
+
+If something is wrong
+---------------------
+Players spawn in Muldraugh: the spawn region file is missing, or its
+  name does not match the server's.
+The map is not there at all: Map= is misspelled, or the mod is not in
+  Mods=, or the server was not restarted.
+One player falls through the world and the rest are fine: that player
+  has not got the mod, or has an older build of it than the server.
+Walls and shop fronts you can see through: Erika's Tiles is missing.
+Odd failures on a world that has been played: the map was added or
+  changed after the world was made. Start a new one.
+
+Nothing in this map needs the server to run any of KnoxMap's own Lua
+except the rifle cache, which is server side and looks after itself.
+The Reset loot menu is single player only and says so when clicked.

@@ -1,0 +1,31 @@
+knoxmap_1793988361042
+=====================
+
+A Project Zomboid map generated with KnoxMap (https://github.com/spytheeuclidean-a11y/knoxmap).
+
+Made with KnoxMap (https://github.com/spytheeuclidean-a11y/knoxmap) by euclid80tr, with work from PonSky, SolarisMare, yoruvell, hamurabi11, spongebobik, Soner Kochan, Tom N, Zombaxx.
+KnoxMap is built on:
+  - Knoxify by arytek (https://github.com/arytek/knoxify): the original OpenStreetMap-to-Project-Zomboid terrain generator KnoxMap is built on
+  - PZ Mapping Tools by Alree / Unjammer (https://github.com/Unjammer/PZ_Mapping_Tools): built on Tim Baker's TileZed and WorldEd
+
+MAP DATA
+Map data (c) OpenStreetMap contributors, available under the Open Database
+License (ODbL): https://www.openstreetmap.org/copyright
+
+This map is a Produced Work made from OpenStreetMap data. It was derived from
+the OpenStreetMap data inside this area (south, west, north, east):
+    [38.43898022689092, 27.02149700827674, 38.516459372366995, 27.120060585644307]
+downloaded on or before 2026-11-06, using the open-source
+method in KnoxMap at the address above. If you publish this map, keep this
+file with it and credit "Map data (c) OpenStreetMap contributors".
+
+Buildings' interiors, residents and zombies are invented by the generator and
+do not describe the real places or anyone connected with them. Not for
+navigation or any real-world use.
+
+PROJECT ZOMBOID
+Thanks to The Indie Stone for creating Project Zomboid (https://projectzomboid.com/),
+which made this possible. This is an unofficial fan production for
+non-commercial purposes made under the Indie Stone Terms
+(https://projectzomboid.com/blog/support/terms-conditions/).
+KnoxMap is not made, endorsed or supported by The Indie Stone.

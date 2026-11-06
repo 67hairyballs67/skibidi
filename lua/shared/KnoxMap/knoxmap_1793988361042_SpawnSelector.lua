@@ -1,0 +1,100 @@
+-- Written by KnoxMap for knoxmap_1793988361042.
+-- Adds this map to Spawn Selector (Steam workshop 3772052709) when it is
+-- installed. Does nothing otherwise.
+local function addToSpawnSelector()
+    if not (SpawnSelector and SpawnSelector.RANDOM_REGIONS
+            and SpawnSelectorPOIs and SpawnSelectorPOIs.entries) then
+        return
+    end
+    if SpawnSelector.KnoxMapAdded_knoxmap_1793988361042 then return end
+    SpawnSelector.KnoxMapAdded_knoxmap_1793988361042 = true
+    table.insert(SpawnSelector.RANDOM_REGIONS,
+        { minX = 21000, minY = 0, maxX = 28199, maxY = 4499 })
+    local pois = {
+        { type = "custom_poi", group = "landmark", name = "Özel Acıbadem İzmir Kent Hastanesi", location = "Çiğli", x = 22611.0, y = 1445.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Şehit Polis Samet Kırcalı Ortaokulu", location = "Çiğli", x = 26473.0, y = 381.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "İstasyonaltı Kapalı Pazar Yeri", location = "Çiğli", x = 23750.0, y = 1687.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Özel Eraslan Eğitim Kurumlar", location = "Çiğli", x = 24652.0, y = 3337.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Nebahat Alparslan Karadavut İlkokulu", location = "Çiğli", x = 25843.0, y = 2048.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Ege Üniversitesi Sağlık Bilimleri Fakültesi", location = "Çiğli", x = 27719.0, y = 1780.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Karşıyaka Necip Demir Ticaret Meslek Lisesi", location = "Çiğli", x = 27397.0, y = 2335.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Eren Şahin Eronat Ortaokulu", location = "Çiğli", x = 25105.0, y = 1826.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Emlakbank Süleyman Demirel Anadolu Lisesi", location = "Çiğli", x = 24854.0, y = 2541.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Fatma Neşe Kaya ilkokulu", location = "Çiğli", x = 25731.0, y = 217.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Şehit Mesut Uzlu Ortaokulu", location = "Çiğli", x = 27005.0, y = 1782.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Gazi Anadolu Lisesi", location = "Çiğli", x = 27210.0, y = 3.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Ahmet Piriştina Kültür Merkezi", location = "Çiğli", x = 26941.0, y = 2008.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "T.C. Çiğli Kaymakamlığı", location = "Çiğli", x = 23323.0, y = 612.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Burak Camii", location = "Çiğli", x = 24833.0, y = 228.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Çiğli Belediyesi Hizmet Binası", location = "Çiğli", x = 23610.0, y = 895.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Gelişim Koleji Anaokulu", location = "Çiğli", x = 21466.0, y = 1622.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Özel Metropol Hastanesi", location = "Çiğli", x = 22336.0, y = 162.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Çiğli Belediyesi", location = "Çiğli", x = 23680.0, y = 930.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Mehmet Ali Lahur Mesleki ve Teknik Anadolu Lisesi", location = "Çiğli", x = 27607.0, y = 1637.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "15 Temmuz Şehitler Anadolu Lisesi", location = "Çiğli", x = 25774.0, y = 1376.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Adnan Menderes Anadolu Lisesi", location = "Çiğli", x = 27957.0, y = 2274.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "AOSB Camii", location = "Çiğli", x = 21555.0, y = 1541.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Atakent Erdoğan Kibarer Ortaokulu", location = "Çiğli", x = 26045.0, y = 2795.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Büyük Çiğli Anadolu Lisesi", location = "Çiğli", x = 23482.0, y = 174.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Necip Fazıl Kısakürek Anadolu Lisesi", location = "Çiğli", x = 24671.0, y = 477.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Mavişehir Okyanus Koleji", location = "Çiğli", x = 25634.0, y = 1413.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Metin Aşıkoğlu Ortaokulu", location = "Çiğli", x = 28174.0, y = 3837.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Karşıyaka Cihat Kora Anadolu Lisesi", location = "Çiğli", x = 27059.0, y = 2967.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Gülsafa Firdevs Kaftancıoğlu İlkokulu", location = "Çiğli", x = 27499.0, y = 324.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Başkent Üniversitesi Hemodiyaliz Polikliniği", location = "Çiğli", x = 24435.0, y = 1013.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Örnekköy Şehit Astsubay Erkan Durukan İlkokulu", location = "Çiğli", x = 27762.0, y = 1243.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "İzzet Gökçimen İlöğretim Okulu", location = "Çiğli", x = 23532.0, y = 135.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Ekol KBB Hastanesi", location = "Çiğli", x = 23419.0, y = 1710.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Memur Kardeşler Camii", location = "Çiğli", x = 24525.0, y = 2667.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Özel Can Hastanesi", location = "Çiğli", x = 23383.0, y = 2012.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Kazım Dirik Anadolu Lisesi", location = "Çiğli", x = 28041.0, y = 1922.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Karşıyaka Belediyesi Suat Taşer Sanat Merkezi", location = "Çiğli", x = 27766.0, y = 4020.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Karşıyaka Zeki Şairoğlu Mesleki ve Teknik Anadolu Lisesi", location = "Çiğli", x = 25196.0, y = 1824.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Tepecik Eğitim ve Araştıma Hastanesi Semt Polikliniği", location = "Çiğli", x = 21510.0, y = 1597.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Güzel Sanatlar Parkı", location = "Çiğli", x = 27619.0, y = 3942.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Yalı Mahallesi Semt Parkı", location = "Çiğli", x = 26990.0, y = 2626.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Yalı Çocuk Parkı", location = "Çiğli", x = 26396.0, y = 2510.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Şehit İlyas Müşkül Parkı", location = "Çiğli", x = 26535.0, y = 2429.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Mavişehir Sports International", location = "Çiğli", x = 25655.0, y = 3043.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Bostanlı Demokrasi Meydanı", location = "Çiğli", x = 27463.0, y = 4065.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "İlhami Yılmaz Parkı", location = "Çiğli", x = 27457.0, y = 3238.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Şehit Ali Hikmet Ayerdem Parkı", location = "Çiğli", x = 27372.0, y = 3199.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Sadi Hoşses Parkı", location = "Çiğli", x = 27201.0, y = 3368.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Fahri Basu Parkı", location = "Çiğli", x = 26158.0, y = 2558.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Mimoza Parkı", location = "Çiğli", x = 26427.0, y = 2078.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Uğur Mumcu Parkı", location = "Çiğli", x = 27296.0, y = 3067.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Fikri Altay Futbol Sahası", location = "Çiğli", x = 27435.0, y = 1996.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Kayâlar Aile Mezarlığı", location = "Çiğli", x = 27039.0, y = 1640.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Bağcı Parkı", location = "Çiğli", x = 28174.0, y = 3566.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Çocuk Parkı", location = "Çiğli", x = 22666.0, y = 1151.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "İstasyonaltı Mezarlık Parkı", location = "Çiğli", x = 23110.0, y = 1104.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Üç Fidan Deniz Parkı", location = "Çiğli", x = 22800.0, y = 1642.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Stad", location = "Çiğli", x = 22494.0, y = 930.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "K.S.K. Selçuk Yaşar Spor Tesisleri", location = "Çiğli", x = 24697.0, y = 1402.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Adnan Saygun Parkı", location = "Çiğli", x = 27811.0, y = 4024.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Olof Palme Parkı", location = "Çiğli", x = 26561.0, y = 3587.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Balıkçı Parkı", location = "Çiğli", x = 27541.0, y = 3735.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Karşıyaka Belediyesi Tellibahçe Spor Tesisi", location = "Çiğli", x = 26943.0, y = 1769.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Piriştina Parkı", location = "Çiğli", x = 26897.0, y = 1964.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Cumhuriyet ve Demokrasi Parkı", location = "Çiğli", x = 23213.0, y = 150.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Martı Parkı", location = "Çiğli", x = 27250.0, y = 62.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Şehit Kurmay Binbaşı Recep Güngör Parkı", location = "Çiğli", x = 27338.0, y = 4045.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Haydar Aliyev Parkı", location = "Çiğli", x = 25865.0, y = 2414.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Pelin Parkı", location = "Çiğli", x = 28073.0, y = 2494.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Serinkuyu Mezarlığı", location = "Çiğli", x = 26996.0, y = 1640.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Mandalin Parkı", location = "Çiğli", x = 27212.0, y = 2110.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Kazım Koyuncu Parkı", location = "Çiğli", x = 22991.0, y = 1657.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Şehit Yakut Boğa Parkı", location = "Çiğli", x = 28084.0, y = 2663.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Gençlik Parkı", location = "Çiğli", x = 27924.0, y = 2116.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Barış Akarsu Parkı", location = "Çiğli", x = 22946.0, y = 1684.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Organize Park", location = "Çiğli", x = 21395.0, y = 1403.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Öztürk Parkı", location = "Çiğli", x = 27999.0, y = 3416.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Nejdet Issı Parkı", location = "Çiğli", x = 27647.0, y = 3031.0, z = 0, placement = "building" },
+        { type = "custom_poi", group = "landmark", name = "Gode Cengiz Parkı", location = "Çiğli", x = 27680.0, y = 3344.0, z = 0, placement = "building" },
+    }
+    for _, poi in ipairs(pois) do
+        table.insert(SpawnSelectorPOIs.entries, poi)
+    end
+end
+
+Events.OnGameBoot.Add(addToSpawnSelector)
